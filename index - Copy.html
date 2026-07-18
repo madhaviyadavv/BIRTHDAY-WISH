@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Happy Birthday bhai❤️</title>
+<link href="style.css" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&amp;family=Great+Vibes&amp;display=swap" rel="stylesheet"/>
+</head>
+
+<div id="fireworks"></div>
+<div id="stars"></div>
+
+<body>
+<div id="loader">
+
+<div class="loader-heart">❤️</div>
+
+<h2>Loading Your Surprise...</h2>
+
+</div>
+    
+<div id="loginScreen" style="position:fixed;inset:0;background:linear-gradient(135deg,#ff758c,#ff7eb3);display:flex;justify-content:center;align-items:center;z-index:9999;">
+<div style="background:#fff;padding:30px;border-radius:16px;text-align:center;max-width:320px;width:90%;font-family:Arial">
+<h2>🔒 Private Birthday Page</h2>
+<input id="pwd" placeholder="Enter Password" style="width:100%;padding:10px;margin:15px 0" type="password"/>
+<button onclick="checkPassword()" style="padding:10px 20px">Open</button>
+<p id="err" style="color:red"></p>
+</div></div><div id="pageContent" style="display:none;">
+<!-- Floating Hearts -->
+<div id="hearts"></div>
+<!-- Background Music -->
+<audio id="bgMusic" loop="">
+<source src="Mera Bhai Tu Meri Jaan Hai Mp3.mp3 " type="audio/mpeg"/>
+</audio>
+<!-- Music Button -->
+<div class="music-player">
+
+    <button id="musicBtn">
+        ▶
+    </button>
+
+    <div class="music-info">
+
+        <h4>Mera bhai tu meri jaan hai..❤️</h4>
+
+        <small>happy birthday best brother🥰💖</small>
+
+    </div>
+
+</div>
+<!-- Hero Section -->
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <div class="hero-image">
+
+            <img class="hero-img" src="p1.jpeg" alt="">
+
+        </div>
+
+        <h3 class="subtitle">
+            🎉 Happy Birthday 🎉
+        </h3>
+
+        <h1 class="title">
+            Bhai ❤️
+        </h1>
+
+        <p class="hero-text">
+
+            Happy Birthday to the best brother! ❤️🎉
+
+          You are not just my brother, but also my best friend and my greatest strength.
+         Thank you for always being there for me. Keep smiling and shining forever.
+          Wishing you endless happiness, success, good health, and all the love in the world. 
+          Have an amazing birthday! 🎂🎁
+
+
+        </p>
+
+    </div>
+
+</section>
+<!-- Countdown -->
+
+<section class="countdown">
+
+    <h2 class="countdown-title">
+        ⏳ Countdown To Your Special Day 🎂
+    </h2>
+
+    <div class="timer">
+
+        <div class="time-box">
+            <h1 id="days">00</h1>
+            <span>Days</span>
+        </div>
+
+        <div class="time-box">
+            <h1 id="hours">00</h1>
+            <span>Hours</span>
+        </div>
+
+        <div class="time-box">
+            <h1 id="minutes">00</h1>
+            <span>Minutes</span>
+        </div>
+
+        <div class="time-box">
+            <h1 id="seconds">00</h1>
+            <span>Seconds</span>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- Gallery -->
+<section class="gallery">
+
+    <h2 class="gallery-title">
+        📸 Beautiful Memories ❤️
+    </h2>
+
+    <div class="gallery-grid">
+
+        <img src="p1.jpeg" onclick="openImage(this.src)">
+        <img src="p2.jpeg" onclick="openImage(this.src)">
+        <img src="p3.jpeg" onclick="openImage(this.src)">
+        <img src="p4.jpeg" onclick="openImage(this.src)">
+        <img src="p5.jpeg" onclick="openImage(this.src)">
+        <img src="p6.jpeg" onclick="openImage(this.src)">
+        <img src="p7.jpeg" onclick="openImage(this.src)">
+        
+
+    </div>
+
+</section>
+
+<!-- Image Viewer -->
+
+<div class="image-viewer" id="viewer">
+
+    <span onclick="closeImage()">✖</span>
+
+    <img id="viewerImg">
+
+</div>
+
+<section class="love-letter">
+
+    <div class="letter-card">
+
+        <h2>💌 A Letter For You ❤️</h2>
+
+        <p id="typingText"></p>
+
+    </div>
+
+</section>
+
+<!-- Surprise -->
+<section class="gift-section">
+
+    <h2>🎁 Your Birthday Surprise 🎁</h2>
+
+    <div class="gift-box" onclick="openGift()">
+
+        <div class="gift-lid"></div>
+
+        <div class="gift-body"></div>
+
+        <span>🎀</span>
+
+    </div>
+
+    <p>Click the Gift Box ❤️</p>
+
+</section>
+<!-- Popup -->
+<div class="popup" id="birthdayPopup">
+<div class="popup-content">
+<span class="close-btn" onclick="closePopup()">&times;</span>
+<img alt="Bhai smiling warmly in a special birthday greeting photo" class="popup-img" src="p1.jpeg"/>
+<h1>💌 Happy Birthday Bhai ❤️</h1>
+<div class="popup-message">
+<p>Dear Bhai,</p>
+<p>
+                    Many many happy returns of the day! 🎂💖
+                </p>
+<p>
+                   tu bhai mera chhota hai lekin advice tumhara bra hota hai 
+
+                </p>
+<p>✨ my ghar na rhu to tu mujhe miss jkrta hai or </p>
+<p>   jb aa jati hu to tu hmesa mera bezzati krta hai. </p>
+<p>✨bhale hi tu mujhse height me bra ho jaye lekin tu hmesa tu chhota hi rhega .</p>
+<p>✨ filhal tumhare baare me itna hii......</p>
+<p>✨ Tumhari life success aur happiness se bhari rahe.</p>
+
+<h2>
+                    Happy Birthday Once Again ❤️
+                </h2>
+<h3>
+                    With Best Wishes &amp; Lots of Love ❤️
+                </h3>
+<h2>Mahavi Yadav ❤️</h2>
+</div>
+</div>
+</div>
+<!-- Footer -->
+<footer>
+
+        Made with ❤️ by Madhavi Yadav.
+
+    </footer>
+<script src="script.js"></script>
+</div><script>
+const correctPassword="#bhai@123";
+function checkPassword(){
+ const v=document.getElementById('pwd').value;
+ if(v===correctPassword){
+   document.getElementById('loginScreen').style.display='none';
+   document.getElementById('pageContent').style.display='block';
+ }else{
+   document.getElementById('err').textContent='❌ Wrong Password';
+   document.getElementById('pwd').value='';
+ }
+}
+document.getElementById('pwd').addEventListener('keydown',e=>{if(e.key==='Enter')checkPassword();});
+</script></body>
+</html>
